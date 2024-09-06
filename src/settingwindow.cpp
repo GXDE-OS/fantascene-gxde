@@ -302,6 +302,12 @@ void settingWindow::readSettings()
     {
         dApp->m_moreData.isEventPenetration = IniManager::instance()->value("Wallpaper/EventPenetration").toBool();
     }
+    if(IniManager::instance()->contains("Wallpaper/DesktopFontColor"))
+    {
+        dApp->m_moreData.fontColor =IniManager::instance()->value("Wallpaper/DesktopFontColor").toString();
+        dApp->setAppColor(dApp->m_moreData.fontColor);
+    }
+
 
     dApp->setSpecialDesktop();
 
@@ -727,6 +733,14 @@ void settingWindow::quitApp()
                                  QDBusConnection::sessionBus());
             iface.asyncCall("EnableBackground", true);
         }
+        else if(dApp->m_isLingMo)
+        {
+            QDBusInterface iface("com.lingmo.Settings",
+                                 "/Theme",
+                                 "com.lingmo.Theme",
+                                 QDBusConnection::sessionBus());
+            iface.asyncCall("setBackgroundVisible", true);
+        }
         //deepinv23 quit!
         else if(dApp->m_isDDE23)
         {
@@ -1111,6 +1125,10 @@ void settingWindow::slotTimerSaveSettings()
     }
 
     IniManager::instance()->setValue("Wallpaper/EventPenetration",dApp->m_moreData.isEventPenetration);
+
+    IniManager::instance()->setValue("Wallpaper/DesktopFontColor",dApp->m_moreData.fontColor);
+    dApp->setAppColor(dApp->m_moreData.fontColor);
+
     int indexLocal = 1;
 //    //去重
 //    dApp->m_allPath = dApp->convertQStringListToSet( dApp->m_allPath).values();

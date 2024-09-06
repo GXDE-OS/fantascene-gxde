@@ -86,6 +86,9 @@ public:
     xcb_connection_t *getXcb_connection_t();
     void  *getDisplay();
 
+    //set app color
+    void setAppColor(const QString & strColor);
+
 Q_SIGNALS:
     void setPlayPath(const QString &PATH);
     void setPlayPath2(const QString &PATH);
@@ -163,6 +166,7 @@ public:
 
     QList<QWindow> m_DesktopWindow;
 
+    bool m_isLingMo =false;//是否是LingMo
     bool m_isUKUI =false;//是否是ukui
     bool m_isDDE23 =false;//是否是dde23
     bool m_isGXDE = false;//是否是GXDE

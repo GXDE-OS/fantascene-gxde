@@ -1,12 +1,6 @@
-fantascene-dynamic-wallpaper (1.8.4-2) UNRELEASED; urgency=medium
+fantascene-dynamic-wallpaper (1.8.6-1) unstable; urgency=medium
 
-  * Non-maintainer upload.
-
- -- gfdgd_xi <3025613752@qq.com>  Sat, 31 Aug 2024 10:30:14 +0800
-
-fantascene-dynamic-wallpaper (1.8.4-1) unstable; urgency=medium
-
- * Update Online client
+ * Update GXDE Lingmo
 
  -- Liu MingHang <liuminghang0821@gmail.com>  Aug, 9 Feb 2024 16:00:39 +0800
 
