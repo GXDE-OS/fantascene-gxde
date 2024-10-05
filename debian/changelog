@@ -1,6 +1,6 @@
-fantascene-dynamic-wallpaper (1.8.6-1) unstable; urgency=medium
+fantascene-dynamic-wallpaper (1.9.2-1) unstable; urgency=medium
 
- * Update GXDE Lingmo
+ * Merge to mainline
 
  -- Liu MingHang <liuminghang0821@gmail.com>  Aug, 9 Feb 2024 16:00:39 +0800
 

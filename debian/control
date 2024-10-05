@@ -2,26 +2,13 @@ Source: fantascene-dynamic-wallpaper
 Section: utils
 Priority: optional
 Maintainer: liuminghang <liuminghang0821@gmail.com>
-Build-Depends:  debhelper (>= 9),
-				pkg-config, 
-				qt5-qmake, 
-				qtbase5-dev, 
-				libxcb-ewmh-dev,
-				libmpv-dev ,
-				qttools5-dev-tools, 
-				libglib2.0-dev,
-				libmtdev-dev ,
-				libx11-xcb-dev , 
-				fakeroot ,
-				qtwebengine5-dev | libqt5webkit5-dev,
-				libxext-dev ,
-				libxrender-dev ,
-				libxcb-shape0-dev
+Build-Depends:  debhelper (>= 9)
 
 Rules-Requires-Root: no
 Standards-Version: 4.6.0.1
 Homepage: https://gitee.com/GXDE-OS/fantascene-gxde/
 Package: fantascene-gxde
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends} , wget, ffmpeg, dde-desktop (>=4.8.8.3)
+Architecture: all
+Depends: fantascene-dynamic-wallpaper
+Conflicts: fantascene-gxde(<=1.9.2-1)
 Description: video wallpaper for fantascene.
