@@ -10,5 +10,4 @@ Homepage: https://gitee.com/GXDE-OS/fantascene-gxde/
 Package: fantascene-gxde
 Architecture: all
 Depends: fantascene-dynamic-wallpaper
-Conflicts: fantascene-gxde(<=1.9.2-1)
 Description: video wallpaper for fantascene.
